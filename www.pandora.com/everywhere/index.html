@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
+    <title>Pandora</title>
+
+    <link type="text/css" href="../static/ads/mip/splash/css/fonts.css" rel="stylesheet" media="screen"/>
+    <link type="text/css" href="../static/programs/everywhere/_css/style.css" rel="stylesheet" media="screen"/>
+    <link type="text/css" href="../static/ads/mip/splash/css/jplayer.css" rel="stylesheet" media="screen"/>
+    <link type="text/css" href="../static/programs/everywhere/_css/adaptive.css" rel="stylesheet" media="screen"/>
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="/static/ads/mip/splash/css/ie8.css">
+    <![endif]-->
+
+    <script type="text/javascript" src="../static/ads/mip/splash/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../static/programs/everywhere/_js/global.js"></script>
+    <script type="text/javascript" src="../static/ads/mip/splash/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../static/ads/mip/splash/js/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="../static/ads/mip/splash/js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="../static/programs/everywhere/_js/jquery.iosslider.min.js"></script>
+    <script type="text/javascript" src="../static/programs/everywhere/_js/brain.js"></script>
+	<script>
+	$(document).ready(function(){
+	
+	
+	
+		$( "#select-partner h3 a" ).click(function() {
+			if ($('.result').is(':visible')) {
+	            $('.result').slideUp();
+	      }
+	      $('.result').filter(this.getAttribute('href')).slideToggle(400);  
+		  $('#select-partner h3').removeClass('active');
+		  $(this).parent('#select-partner h3').addClass('active');   
+	      return false;
+	      });
+	  
+		  //mobile
+	  
+		  $( "#partner-result h3 a" ).click(function() {
+	      $('.result').filter(this.getAttribute('href')).slideToggle(400);
+	      $(this).parent('#partner-result h3').toggleClass('close');      
+	      return false;
+	      });
+	  
+		  //mobile
+
+	});
+	
+	$(window).resize(function() {
+	$(".slide").load();
+	});
+
+	
+	</script>
+    
+       
+
+<style>html, body {-webkit-text-size-adjust: 100%;}
+
+.partner { 
+	display: inline-block;
+    margin: 10px;
+    text-align: center;
+    width: 165px;
+}
+
+.iosSlider .slider .slide img,
+.slide-text {
+    cursor: default !important;
+}
+
+.slide-text h2 {
+    width: 56%;
+}
+.slide-text h3 {
+  width: 70%;
+}
+
+@media only screen and (max-width : 768px) {
+
+.partner { 
+	display: inline-block;
+    margin: 2%;
+    width: 28.5%;
+}
+
+.responsiveHeight {
+    height: 0;
+    padding: 0 0 95%;
+}
+
+.slide-text h2,
+.slide-text h3 {
+    width: auto;
+}
+	
+}
+
+@media only screen and (max-width : 480px){
+	
+.partner { 
+	display: inline-block;
+    margin: 3%;
+    width: 42.5%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="topBarContainer">
+    <a id="pandoraLogo" href="../index.html" ></a>
+    <div id="topBarBtns" class="topHelpBtn">
+  		<a href="https://help.pandora.com/" target="_blank">Need Help?</a>
+	</div>
+</div>
+
+<div id="mbl_navBarIcon" class="mbl">
+  <a id="pandoraLogo" href="../index.html" ></a>
+  <div id="mbl_menuIcon"></div>
+</div>
+<div id="navBarContainer">
+  <div class="wrapper">
+    <div id="navContainer" class="topRules">
+      <ul id="topNav">
+        <li><a href="index.html#" class="active">In The Home</a></li>
+        <li><a href="in-the-car.html">In The Car</a></li>
+        <li><a href="on-the-go.html" >On The Go</a></li>
+        <li><a href="for-your-business.html">For Your Business</a></li>
+        <li class="menuHelpBtn"><a href="https://help.pandora.com/" >Need Help?</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="responsiveHeight">
+
+        <!--div id="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div-->
+
+        <!--<div id="navNext" class="btn"></div>
+        <div id="navPrev" class="btn"></div>-->
+
+        <div class="inner">
+            <div class="iosSlider">
+                <div class="slider">
+
+                    <div class="slide">
+                        <img src="../static/programs/everywhere/_img/home/Hero_Web.jpg" class="web-slide">
+                        <img src="../static/programs/everywhere/_img/home/Hero_Mobile.jpg" class="mbl-slide">
+                        <div class="slide-text left">
+                        	<h2>Fill your home with the music you love</h2>
+	  						<h3>When you create a Pandora account, your stations are accessible to you from every connected device in your home.</h3>
+      						<!--<a href="https://amp.pandora.com/register" target="_blank" class="btn mblHide">Get Started</a>-->
+                        </div>
+                    </div>
+                    <!--div class="slide">
+                        <img src="/static/programs/everywhere/_img/mobile-slide2.jpg">
+                        <div class="slide-text left alt-slide">
+                        	<h2>Check out the new Roku 3, now playing your favorite stations</h2>
+      						<a href="#" target="_blank" class="btn">Learn More</a>
+                        </div>
+                    </div-->
+                 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+<div class="fullBleed content">
+  <div class="wrapper" id="stores">
+    <div class="columnRow">
+    <p>Pandora can be streamed directly through 1,700 connected devices. Click below for more details on availability.</p>
+    </div>
+    
+    <div id="home-partners">
+    	<div id="select-partner">
+        <h3 class="active"><a href="index.html#audiovideo">Audio Video Receivers</a></h3>
+        <h3><a href="index.html#bluray">Blu-ray Players</a></h3>
+        <h3><a href="index.html#tvproviders">Cable/Satellite Providers</a></h3>
+        <h3><a href="index.html#gameconsoles">Game Consoles</a></h3>
+        <h3><a href="index.html#homeaudio">Home Audio</a></h3>
+        <h3><a href="index.html#hometheater">Home Theater</a></h3>
+        <h3><a href="index.html#streaming">Streaming Players</a></h3>
+        <h3><a href="index.html#tabletop">Table-Top Radio</a></h3>
+        <h3><a href="index.html#tv">TV</a></h3>
+        
+        </div>
+        <div id="partner-result">
+            <h3><a href="index.html#audiovideo">Audio Video Receivers</a></h3>
+        	<div id="audiovideo" class="result">
+                <div class="partner">
+                	<a href="http://usa.denon.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_denon.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.harmankardon.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_harmankardon.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                 	<a href="http://www.integrahometheater.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_integra.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.insigniaproducts.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_insignia.png" width="200" height="135" /></a>
+            	</div> 
+                <div class="partner">
+                  	<a href="http://www.lg.com/us" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_lg.png" width="200" height="135" /></a>
+            	</div>
+                <div class="partner">
+                  	<a href="http://us.marantz.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_marantz.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.mcintoshlabs.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_mcintosh.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                	<a href="http://us.onkyo.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_onkyo.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.pioneerelectronics.com/PUSA/Home" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_pioneer.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.sherwoodusa.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sherwood.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.sony.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sony.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                 	<a href="http://usa.yamaha.com/products/audio-visual/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_yamaha.png" width="200" height="135" /></a>
+            	</div>  
+        	</div>
+            
+            <h3><a href="index.html#bluray">Blu-ray Players</a></h3>
+        	<div id="bluray" class="result">
+                <div class="partner">
+                	<a href="http://www.insigniaproducts.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_insignia.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.integrahometheater.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_integra.png" width="200" height="135" /></a>
+            	</div>     
+            	<div class="partner">
+                  	<a href="http://www.lg.com/us" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_lg.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://us.onkyo.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_onkyo.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.oppodigital.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_oppo.png" width="200" height="135" /></a>
+            	</div>      
+            	<div class="partner">
+                  	<a href="http://shop.panasonic.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_panasonic.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.usa.philips.com/c/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_philips.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.pioneerelectronics.com/PUSA/Home" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_pioneer.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.rca.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_rca.png" width="200" height="135" /></a>
+            	</div>     
+            	<div class="partner">
+                  	<a href="http://www.samsung.com" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_samsung.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.sharpusa.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sharp.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.sony.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sony.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.toshiba.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_toshiba.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.vizio.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_vizio.png" width="200" height="135" /></a>
+            	</div>  
+        	</div>
+            
+            <h3><a href="index.html#tvproviders">Cable/Satellite Providers</a></h3>
+        	<div id="tvproviders" class="result">
+				<div class="partner">
+                  	<a href="http://www.autonomic-controls.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_autonomiccontrols.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.comcast.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_comcastxfinity.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.directv.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_directv.png" width="200" height="135" /></a>
+            	</div>     
+            	<div class="partner">
+                  	<a href="http://www.dish.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_dishnetwork.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.verizon.com/home/fios/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_verizonfios.png" width="200" height="135" /></a>
+            	</div>   
+        	</div>
+            
+            <h3><a href="index.html#gameconsoles">Game Consoles</a></h3>
+        	<div id="gameconsoles" class="result">
+				<div class="partner">
+                  	<a href="http://www.xbox.com/en-US/entertainment/xbox-one/live-apps/pandora" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_xbox.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.sony.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sony.png" width="200" height="135" /></a>
+            	</div>
+        	</div>
+            
+            <h3><a href="index.html#homeaudio">Home Audio</a></h3>
+        	<div id="homeaudio" class="result">
+				<div class="partner">
+                  	<a href="http://www.bose.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_bose.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.cambridgeaudio.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_cambridgeaudio.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.logitech.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_logitech.png" width="200" height="135" /></a>
+            	</div>     
+            	<div class="partner">
+                  	<a href="http://phorus.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_phorus.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.pioneerelectronics.com/PUSA/Home" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_pioneer.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://us-en.sonoro-audio.com/products.html" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sonoro.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.sonos.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sonos.png" width="200" height="135" /></a>
+            	</div>
+        	</div>
+            
+            <h3><a href="index.html#hometheater">Home Theater</a></h3>
+        	<div id="hometheater" class="result">
+        		<div class="partner">
+                  	<a href="http://funaiamerica.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_funai.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.harmankardon.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_harmankardon.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.insigniaproducts.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_insignia.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.jbl.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_jbl.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.lg.com/us" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_lg.png" width="200" height="135" /></a>
+            	</div> 
+            	<div class="partner">
+                  	<a href="http://us.onkyo.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_onkyo.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://shop.panasonic.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_panasonic.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.usa.philips.com/c/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_philips.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.pioneerelectronics.com/PUSA/Home" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_pioneer.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.rca.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_rca.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.samsung.com" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_samsung.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.sony.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sony.png" width="200" height="135" /></a>
+            	</div> 
+        	</div>
+            
+            <h3><a href="index.html#streaming">Streaming Players</a></h3>
+        	<div id="streaming" class="result">
+        		<div class="partner">
+                  	<a href="http://www.asus.com/us/Multimedia/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_asus.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.dlink.com/us/en" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_dlink.png" width="200" height="135" /></a>
+            	</div> 
+            	<div class="partner">
+                  	<a href="http://funaiamerica.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_funai.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.lg.com/us" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_lg.png" width="200" height="135" /></a>
+            	</div> 
+            	<div class="partner">
+                  	<a href="http://www.logitech.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_logitech.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.netgear.com/home/products/connected-entertainment/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_netgear.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="https://www.ouya.tv/about/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_ouya.png" width="200" height="135" /></a>
+            	</div>    
+            	<div class="partner">
+                  	<a href="http://shop.panasonic.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_panasonic.png" width="200" height="135" /></a>
+            	</div> 
+            	<div class="partner">
+                  	<a href="http://www.usa.philips.com/c/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_philips.png" width="200" height="135" /></a>
+            	</div> 
+            	<div class="partner">
+                  	<a href="http://www.rca.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_rca.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.roku.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_roku.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.sony.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sony.png" width="200" height="135" /></a>
+            	</div> 
+            	<div class="partner">
+                  	<a href="http://www.tivo.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_tivo.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.uebo.net/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_uebo.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.vizio.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_vizio.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.wd.com/en/products/homeentertainment/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_westerndigital.png" width="200" height="135" /></a>
+            	</div>
+        	</div>
+            
+            <h3><a href="index.html#tabletop">Table-Top Radio</a></h3>
+        	<div id="tabletop" class="result">
+				<div class="partner">
+                  	<a href="http://www.cambridgeaudio.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_cambridgeaudio.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.gracedigitalaudio.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_gracedigital.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.insigniaproducts.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_insignia.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.livioradio.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_livioradio.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.logitech.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_logitech.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://us.marantz.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_marantz.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.sony.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sony.png" width="200" height="135"  /></a>
+            	</div>
+        	</div>
+            
+            <h3><a href="index.html#tv">TV</a></h3>
+        	<div id="tv" class="result">
+				<div class="partner">
+                  	<a href="http://hisense-usa.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_hisense.png" width="200" height="135" /></a>
+            	</div>
+            	<div class="partner">
+                  	<a href="http://www.insigniaproducts.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_insignia.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://www.jvc.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_jvc.png" width="200" height="135" /></a>
+            	</div>     
+            	<div class="partner">
+                  	<a href="http://www.lg.com/us" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_lg.png" width="200" height="135" /></a>
+            	</div> 
+                <div class="partner">
+                  	<a href="http://www.mitsubishielectric.com" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_mitsubishielectric.png" width="200" height="135" /></a>
+            	</div>  
+            	<div class="partner">
+                  	<a href="http://shop.panasonic.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_panasonic.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.usa.philips.com/c/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_philips.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.samsung.com" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_samsung.png" width="200" height="135" /></a>
+            	</div>
+                <div class="partner">
+                  	<a href="http://www.seiki.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_seiki.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.sharpusa.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sharp.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.sony.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_sony.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.tcl.com/en.php" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_tcl.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.toshiba.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_toshiba.png" width="200" height="135" /></a>
+            	</div>   
+            	<div class="partner">
+                  	<a href="http://www.vizio.com/" target="_blank"><img src="../static/programs/everywhere/_img/home/logo_vizio.png" width="200" height="135" /></a>
+            	</div>  
+        	</div>
+            
+        </div>
+    </div>
+    <br clear="all" />
+    
+    </div>
+
+  </div>
+
+
+    <footer id="footerContainer">
+    </footer>
+
+
+  <script>
+    $(function(){
+      $("#footerContainer").load("/static/programs/everywhere/footer.html");
+    });
+  </script>
+  
+<script>
+$('a').append(function() {
+	var href = $(this).attr('href');
+	if (href !== "#") {
+    	$(this).attr('onclick', 'trackOutboundLink(\''+href+'\'); return false;');
+    	return false;
+	}
+});
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2309503-19', 'auto');
+  ga('send', 'pageview');
+  
+  var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+     function () {
+     document.location = url;
+     }
+   });
+}
+
+</script>
+
+</body>
+</html>

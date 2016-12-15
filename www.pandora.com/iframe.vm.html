@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+	<script src="js/json2.min.js"></script>
+	<script src="js/libs/jquery-1.9.1.min.js"></script>
+	<script src="js/libs/jstorage.min.js"></script>
+	<script src="js/libs/underscore-1.2.1.min.js"></script>
+
+	<script type="text/javascript">
+		window.addEventListener('message', function(event) {
+			var originArray = event.origin.split(":") || event.originalEvent.origin.split(":");
+			var originUrl = originArray[0] + ":" + originArray[1];
+			var url = window.location.protocol + "//" + window.location.hostname;
+
+			if (originUrl !== url.replace('https:', 'http:')) {
+				return;
+			} else {
+				var data = JSON.parse(event.data);
+				localStorage.setItem('jStorage', data);
+			}
+
+		}, false);
+	</script>
+</head>
+<body>
+</body>
+</html>

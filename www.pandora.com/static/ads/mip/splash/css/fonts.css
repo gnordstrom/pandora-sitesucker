@@ -1,0 +1,54 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2894359, 2014-10-02T15:34:17-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed fonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: AvenirLTStd-Medium by Linotype
+ * URL: http://www.myfonts.com/../fonts/linotype/avenir/65-medium/
+ * Copyright: Copyright &#x00A9; 1981 - 2006 Linotype GmbH, www.linotype.com. All rights reserved. Copyright &#x00A9; 1989 - 2002 Adobe Systems Incorporated.  All Rights Reserved.
+ *
+ * Webfont: AvenirLTStd-Light by Linotype
+ * URL: http://www.myfonts.com/../fonts/linotype/avenir/35-light/
+ * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2894359
+ * Licensed pageviews: 250,000
+ *
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("http://hello.myfonts.net/count/2c2a17");
+
+
+@font-face {font-family: 'AvenirLTStd-Medium';src: url('../fonts/2C2A17_0_0.eot');src: url('../fonts/2C2A17_0_0-.eot#iefix') format('embedded-opentype'),url('../fonts/2C2A17_0_0.woff') format('woff'),url('../fonts/2C2A17_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirLTStd-Light';src: url('../fonts/2C2A17_3_0.eot');src: url('../fonts/2C2A17_3_0-.eot#iefix') format('embedded-opentype'),url('../fonts/2C2A17_3_0.woff') format('woff'),url('../fonts/2C2A17_3_0.ttf') format('truetype');}
+
+
+@font-face {
+    font-family: 'NimbusSanNov-Lig';
+    src: url('../fonts/NimbusSanNov-Lig.eot');
+    src: url('../fonts/NimbusSanNov-Lig-.eot#iefix') format('embedded-opentype'),
+         url('../fonts/NimbusSanNov-Lig.woff') format('woff'),
+         url('../fonts/NimbusSanNov-Lig.ttf') format('truetype'),
+         url('../fonts/NimbusSanNov-Lig.svg#NimbusSanNov-Lig') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'ChaletComprime-CologneEighty';
+  src: url('../fonts/NimbusSanNov-Lig.eot');
+  src: url('../fonts/NimbusSanNov-Lig.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

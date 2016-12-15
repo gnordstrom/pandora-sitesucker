@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
+
+	<meta property="og:title"			content="Pandora | Careers"/>
+	<meta property="og:type"			content="article" />
+	<meta property="og:image"			content="https://pandora.com/static/careers/_img/meta-img.jpg" />
+	<meta property="og:description"		content="At Pandora, we're a unique collection of engineers, musicians, designers, marketers, and world-class sellers with a common goal: to enrich lives by delivering effortless personalized music enjoyment and discovery." />
+
+	<title>Pandora | Careers</title>
+
+	<link type="text/css" href="_css/fonts.css" rel="stylesheet" media="screen"/>
+	<link type="text/css" href="_css/style.css" rel="stylesheet" media="screen"/>
+
+	<script type="text/javascript" src="_js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="_js/global.js"></script>
+	<script type="text/javascript" src="_js/alljobs.js"></script>
+
+
+	<script>
+		$(function(){
+			$("#navBarContainer").load("/static/careers/topNav.html");
+			$("#footerContainer .footer-careers").load("/static/careers/footer-careers.html");
+			$("#footerContainer .footer-pandora").load("/static/careers/footer.html");
+			$(".careers-diversityFooter").load("/static/careers/footer-diversity.html");
+		});
+	</script>
+
+
+</head>
+
+<body>
+	<div id="topBarContainer">
+		<a id="pandoraLogo" href="../../index.html" ></a>
+	</div>
+	<div id="mbl_navBarIcon" class="mbl">
+		<a id="pandoraLogo" href="../../index.html" ></a>
+		<div id="mbl_menuIcon"></div>
+	</div>
+
+	<div id="navBarContainer"></div>
+
+
+	<div class="heroHeader">
+		<div class="heroTitle">
+			<div class="title">
+				<h1>Current Openings</h1>
+			</div>
+			<div class="heroImage">
+				<img src="_img/_careers/hero.jpg" />
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<section>
+			<p>Don’t see a position that’s a fit for you? Sign up for job notifications&nbsp;<a href="https://app.jobvite.com/CompanyJobs/Careers.aspx?c=qhd9Vfwi&amp;k=Notify" target="blank" rel="noopener">here</a>.</p>
+		</section>
+		<hr/>
+		<section>
+			<div id="sortMenu">
+				<div class="sortBy"><h6>Sort Positions By</h6></div>
+				<div class="sortButtonContainer">
+					<a class="sortButton btn active" data-filter="category">Department</a>
+					<a class="sortButton btn" data-filter="location">Location</a>
+					<a class="sortButton btn" data-filter="date">Post Date</a>
+				</div>
+			</div>
+
+			<span class="spacer"></span>
+
+			<div id="allJobsContainer">
+				<div class="preloader"></div>
+			</div>
+		</section>
+		<hr/>
+		<section class="careers-diversityFooter">
+		</section>
+	</div>
+
+	<footer id="footerContainer">
+		<div class="footer-careers"></div>
+		<div class="footer-pandora"></div>
+	</footer>
+</body></html>

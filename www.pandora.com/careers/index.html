@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
+
+	<meta property="og:title"			content="Pandora | Careers" />
+	<meta property="og:type"			content="article" />
+	<meta property="og:image"			content="https://pandora.com/static/careers/_img/meta-img.jpg" />
+	<meta property="og:description"		content="At Pandora, we're a unique collection of engineers, musicians, designers, marketers, and world-class sellers with a common goal: to enrich lives by delivering effortless personalized music enjoyment and discovery." />
+
+	<title>Pandora | Careers</title>
+
+	<link type="text/css" href="../static/careers/_css/fonts.css" rel="stylesheet" media="screen"/>
+	<link type="text/css" href="../static/careers/_css/style.css" rel="stylesheet" media="screen"/>
+
+	<script type="text/javascript" src="../static/careers/_js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../static/careers/_js/jquery.iosslider.min.js"></script>
+	<script type="text/javascript" src="../static/careers/_js/jquery.sticky.js"></script>
+
+
+	<script>
+		$(function(){
+			$("#navBarContainer").load("/static/careers/topNav.html");
+			$("#footerContainer .footer-careers").load("/static/careers/footer-careers.html");
+			$("#footerContainer .footer-pandora").load("/static/careers/footer.html");
+		});
+	</script>
+
+
+	<script>
+		// set up infographic slider
+		$(function(){
+			$(document).ready( function(){
+
+				// Sticky Welcome Sections Nav
+				function getOffset() {
+					var offset;
+					if( $(window).width() <1200) {
+						offset = $("#mbl_navBarIcon").height();
+					} else {
+						offset = $("#topBarContainer").height() + $("#navBarContainer").height();
+					}
+					return offset;
+				}
+				var offset = getOffset();
+				$("#welcome-nav").sticky({topSpacing: offset });
+				$("#welcome-nav").sticky('update');
+
+				// Diversity slider setup
+				$( ".diversity-infographic .iosslider" ).iosSlider( {
+					snapToChildren: true,
+					navSlideSelector: '.navButtons .item',
+					responsiveSlideContainer: true,
+					desktopClickDrag: true,
+					infiniteSlider: true,
+					onSlideChange: slideChange
+				} );
+
+				function slideChange( args ) {
+					var currentSlide = args.currentSlideNumber;
+					// alert( currentSlide );
+					$( ".diversity-infographic .navButtons .item" ).removeClass( "selected" );
+					$( ".diversity-infographic .navButtons .item:nth-child(" + currentSlide +  ")" ).addClass( "selected" );
+				}
+			});
+		});
+
+	</script>
+
+
+</head>
+
+<body>
+	<div id="topBarContainer">
+		<a id="pandoraLogo" href="../index.html" ></a>
+	</div>
+	<div id="mbl_navBarIcon" class="mbl">
+		<a id="pandoraLogo" href="../index.html" ></a>
+		<div id="mbl_menuIcon"></div>
+	</div>
+
+	<div id="navBarContainer"></div>
+
+
+	<div class="heroHeader">
+		<div class="heroTitle">
+			<div class="title">
+				<h1>Discover Your Future at Pandora</h1>
+				<a class="btn light" href="https://pandora.com/careers/all" >Join Us</a>
+			</div>
+			<div class="heroImage">
+				<img src="../static/careers/_img/_home/hero.jpg" />
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<section id="welcome-intro">
+			<h1>Pandora = People</h1>
+			<h3>Be a part of the engine that creates the soundtrack&nbsp;to&nbsp;life.</h3>
+			<p>We're a unique collection of engineers, musicians, designers, marketers, and world-class sellers with a common goal: to enrich lives by delivering effortless personalized music enjoyment and discovery. People&nbsp;&mdash;&nbsp;the listeners, the music makers, and our employees&nbsp;&mdash;&nbsp;are at the center of our purpose and everything we do, and we're looking for smart individuals who are self-motivated and passionate&nbsp;to&nbsp;join&nbsp;us. Discover&nbsp;your&nbsp;future&nbsp;at&nbsp;Pandora.</p>
+			<div class="spacer lg"></div>
+			<div class="block-media" id="welcome-media-block">
+				<div class="welcome-video">
+					<iframe src="https://www.youtube.com/embed/3R36grlNTlM" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="welcome-photo">
+					<img src="../static/careers/_img/_home/pandora.jpg" />
+				</div>
+			</div>
+		</section>
+		<div id="welcome-nav">
+			<ul id="welcome-nav--menu" class="welcomeTrigger contentNav">
+				<li><a href="https://pandora.com/careers/#diversity" class="btn welcome-diversity active">Diversity</a></li>
+				<li><a href="https://pandora.com/careers/#music" class="btn welcome-music">Music</a></li>
+				<li><a href="https://pandora.com/careers/#giving" class="btn welcome-giving">Giving</a></li>
+				<li><a href="https://pandora.com/careers/#benefits" class="btn welcome-benefits">Benefits</a></li>
+			</ul>
+		</div>
+		<div id="welcome-collapse" class="welcomeTarget">
+			<section id="diversity" class="welcome-diversity active">
+				<h1>Diversity at Pandora</h1>
+				<h3>Pandora is committed to playing a role in creating a more equitable society in which our business, employees, and communities will thrive.</h3>
+				<p>Our goals are:</p>
+				<ol>
+					<li>Increase the percentage of US employees of color from 35% to 45% by 2020, starting with our main hubs (Oakland, New York, Chicago, Los Angeles).</li>
+					<li>Commit to gender, racial &amp; ethnic promotion parity by 2020.</li>
+					<li>Reflect the diversity of our audience, musicians, and local communities across our business in our brand collateral, music partnerships, and live events.</li>
+				</ol>
+				<p>All of this simply means that we are building and fostering a diverse workforce that is a true reflection of music &ndash; empowering, inspiring, and unique &ndash; where all of our employees feel at home to perform their best and be themselves. In addition to amplifying a culture that celebrates our differences, Pandora Mixtape, PRIDE, and Women are three Communities at Pandora that provide more support, visibility, and empowerment to our underrepresented employees.</p>
+
+				<p>See our public goals announcement <a href="https://blog.pandora.com/pandora-news/a-north-star-for-diversity/" target="_blank" rel="noopener">here</a> and learn more about our philosophy <a href="https://medium.com/@rrrlisarrr/what-we-do-two-years-of-diversity-work-at-pandora-68cea63e0bc8#.d34qybgqx" target="_blank" rel="noopener">here</a>.</p>
+				<span class="spacer"></span>
+				<h2>Communities at Pandora</h2>
+				<div id="welcome-perg"><img src="../static/careers/_img/_home/rebrand-perg-women.png"/><img src="../static/careers/_img/_home/rebrand-perg-pride.png"/><img src="../static/careers/_img/_home/rebrand-perg-mixtape.png"/></div>
+				<span class="spacer"></span>
+				<h2>Demographics</h2>
+				<div class="diversity-infographic">
+					<div class="wrapper">
+						<div class="infographic-navigation">
+							<!-- <img src="/static/careers/_img/_home/diversity_header.png" class="header" /> -->
+							<div class="navButtons">
+								<span class="item selected">Overall</span>
+								<span class="item">Leadership</span>
+								<span class="item">Tech Roles</span>
+								<span class="item">Non-Tech Roles</span>
+								<span class="item">Interns</span>
+							</div>
+						</div>
+						<div class="iosslider">
+							<div class="slider">
+								<div class="slide">
+									<img src="../static/careers/_img/_home/diversity_overall_16.png" />
+								</div>
+								<div class="slide">
+									<img src="../static/careers/_img/_home/diversity_leader_16.png" />
+								</div>
+								<div class="slide">
+									<img src="../static/careers/_img/_home/diversity_techRoles_16.png" />
+								</div>
+								<div class="slide">
+									<img src="../static/careers/_img/_home/diversity_nontechRoles_16.png" />
+								</div>
+								<div class="slide">
+									<img src="../static/careers/_img/_home/diversity_interns_16.png" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="music" class="welcome-music">
+				<h1>Music at Pandora</h1>
+				<p>Music is the soul of our company, and we have many opportunities for our employees to connect with the artists or songs they love. Whether it's catching an onsite performance, or playing instruments with coworkers, we encourage everyone at Pandora to discover what moves them.</p>
+				<span class="spacer"></span>
+				<h2>In-Office Performances</h2>
+				<p>Several of our offices host intimate, stripped-down <a href="https://pdora.co/careers" target="blank" rel="noopener">sessions</a> for our employees from artists across all styles of music and comedy. Past sets include Hermitude, Ben Harper, Aurora, Ryan Bingham, and Dr. Dog.</p>
+				<span class="spacer"></span>
+				<h2>Pandora Concerts</h2>
+				<p>Beyond the office, we are uniting bands, brands, and fans through music discovery. Our shows include <a href="https://www.youtube.com/watch?v=VnwvcQY9L_w" target="blank" rel="noopener">Pandora Discovery Den</a> at SXSW, Pandora Presents, and custom shows such as Noche de Musica.</p>
+				<br class="spacer"/>
+				<div class="block-media" id="welcome-media-block">
+					<div class="welcome-video">
+						<iframe src="https://www.youtube.com/embed/5skBr_96dPc" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class="welcome-photo">
+						<img src="../static/careers/_img/_home/music_3.jpg" />
+					</div>
+				</div>
+			</section>
+			<section id="giving" class="welcome-giving">
+				<h1>Giving At Pandora</h1>
+				<p>We believe Pandora and our employees can make a lasting impact on our communities. We offer many opportunities for our employees to flex their philanthropic muscles and support the neighborhoods in which we work.</p>
+				<span class="spacer"></span>
+				<h2>Volunteer Time Off</h2>
+				<p>Each year Pandora employees receive 40 hours of paid volunteer time off to support causes they are passionate about or to participate in Pandora's organized volunteer events, from teaching kids how to play instruments, assisting the homeless and families in need, bringing the power of music to the elderly, and many more rewarding causes.</p>
+				<span class="spacer"></span>
+				<h2>Music Education and Enrichment</h2>
+				<p>Our Giving program aims to unleash the infinite power of music by supporting organizations that bring music education and enrichment to our communities. These efforts range from small-scale volunteer events that bring the healing power of music to vulnerable populations to larger initiatives such as partnering with <a href="https://www.littlekidsrock.org/" target="blank" rel="noopener">Little Kids Rock</a> to bring music education programs to schools in our neighborhoods.</p>
+				<br class="spacer"/>
+				<div class="block-media">
+					<div class="square">
+						<img src="../static/careers/_img/_home/giving_2.jpg" />
+					</div>
+					<div class="square">
+						<img src="../static/careers/_img/_home/giving_1.jpg" />
+					</div>
+					<div class="rect">
+						<img src="../static/careers/_img/_home/giving_3.jpg" />
+					</div>
+				</div><!--end media block-->
+
+			</section>
+			<section id="benefits" class="welcome-benefits">
+				<h1>Benefits at Pandora</h1>
+				<p>To us, wellness means more than providing health insurance. We value our employees' happiness and provide a comprehesive benefits package to all of our employees.</p>
+				<p>Below are some of the benefits you can expect at Pandora. For more details, you can <a href="https://pandora.com/static/careers/2016_Benefits.pdf" target="blank" rel="noopener">download</a> a PDF of our 2016 benefits.
+					<ul>
+						<li>15 paid days off per year</li>
+						<li>Unlimited sick days</li>
+						<li>40 hours paid volunteer time off per year</li>
+						<li>3 months full paid leave for new parents</li>
+						<li>Gender affirmation surgery</li>
+						<li>Long-term equity programs</li>
+						<li>Pre-tax commuter and parking programs</li>
+						<li>Chiropractic and acupuncture discounts</li>
+						<li>Onsite chair massage</li>
+						<li>401(k) plan</li>
+					</ul>
+				</p>
+				<span class="spacer"></span>
+				<h1>PERGs</h1>
+				<p>There's a PERG for that! Our employee-created and company sponsored PERGs (Pandora Employee Resource Groups) bring our staff together around shared interests and passions. If one doesn't exist around your interest, <a href="../static/careers/all.html">join us</a> and create one!</p>
+				<p>Some that may spark your interest:
+					<ul>
+						<li>Rock Ramblers (rock climbing)</li>
+						<li>Documentary PERG</li>
+						<li>Lunch Time Gamers</li>
+						<li>Vegan Philosophers</li>
+						<li>PARdora (golf)</li>
+						<li>Hip Hop PERG</li>
+						<li>Makers Lab (3D printing)</li>
+						<li>ARP-Animal Rescue</li>
+					</ul>
+				</p>
+				<br class="spacer"/>
+				<div class="block-media">
+					<div class="square">
+						<img src="../static/careers/_img/_home/benefits_1.jpg" />
+					</div>
+					<div class="square">
+						<img src="../static/careers/_img/_home/benefits_3.jpg" />
+					</div>
+					<div class="rect">
+						<img src="../static/careers/_img/_home/benefits_2.jpg" />
+					</div>
+				</div><!--end media block-->
+			</section>
+
+		</div>
+
+	</div><!-- .content end -->
+
+	<footer id="footerContainer">
+		<div class="footer-careers"></div>
+		<div class="footer-pandora"></div>
+	</footer>
+
+</body></html>

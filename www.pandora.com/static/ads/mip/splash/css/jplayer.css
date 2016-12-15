@@ -1,0 +1,225 @@
+/*---------------------------------------------------------------------------
+	VIDEO
+---------------------------------------------------------------------------*/
+
+#videoShadowBox {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.85);
+	z-index: 8000;
+}
+
+#videoPlayer {
+text-align: left;
+}
+
+#videoPlayerContainer {
+	position: fixed;
+	border-left: 4px solid #ffffff;
+	border-right: 4px solid #ffffff;
+	border-top: 4px solid #ffffff;
+	z-index: 9000;
+	background-color: #000;
+}
+
+#videoPlayerContainer.hide {
+	top: -400% !important;
+}
+
+#videoPlayerContainer .close {
+	width: 42px;
+	height: 42px;
+	background-image: url("http://pandora.com/static/ads/mip/splash/img/close.png");
+	background-size: 100%;
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	cursor: pointer;
+	z-index: 6000;
+}
+
+.jp-interface {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 61px;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+/* poster image play click*/
+.jp-video-play {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9999;
+}
+
+.jp-play {
+	min-width: 5%;
+	height: 100%;
+	background-image: url("http://pandora.com/static/ads/mip/splash/img/vid_play.png");
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+  border-right: 1px solid rgb(164,164,164);
+  border-right: 1px solid rgba(127,127,127,0.3);
+}
+
+.jp-pause {
+	min-width: 5%;
+	height: 100%;
+	background-image: url("http://pandora.com/static/ads/mip/splash/img/vid_pause.png");
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+  border-right: 1px solid rgb(164,164,164);
+  border-right: 1px solid rgba(127,127,127,0.3);
+}
+
+.jp-mute {
+	min-width: 5%;
+	height: 100%;
+	background-image: url("http://pandora.com/static/ads/mip/splash/img/vid_mute.png");
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0;
+	top: 0;
+  border-left: 1px solid rgb(164,164,164);
+  border-left: 1px solid rgba(127,127,127,0.3);
+}
+
+.jp-unmute {
+	min-width: 5%;
+	height: 100%;
+	background-image: url("http://pandora.com/static/ads/mip/splash/img/vid_unmute.png");
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0;
+	top: 0;
+  border-left: 1px solid rgb(164,164,164);
+  border-left: 1px solid rgba(127,127,127,0.3);
+}
+
+.jp-volume {
+	width: 57px;
+	height: 100%;
+	float: right;
+	background-color: green;
+}
+
+#videoTimeProgress {
+	width: 83%;
+	max-width: 1200px;
+	height: 100%;
+	margin: auto;
+	display: inline-block;
+}
+
+.jp-time {
+	margin-top: 23px;
+	color: #727272;
+	font-family: 'AvenirNextLTPro-Regular', 'helvetica', sans-serif;
+	font-size: 16px;
+	float: left;
+}
+
+.jp-no-solution {
+	position:absolute;
+	width:390px;
+	margin-left:-202px;
+	left: 50%;
+	top: 10px;
+
+	padding:5px;
+	font-size:.8em;
+	background-color:#eee;
+	border:2px solid #009be3;
+	color:#000;
+	display:none;
+}
+
+
+.jp-progress {
+	width: 82%;
+	max-width: 800px;
+	margin: 27px 0 15px 10px;
+	height: 6px;
+	float: right;
+}
+
+.jp-seek-bar {
+	width:0px;
+	height:100%;
+	cursor: pointer;
+  border: 1px solid rgb(193,193,193);
+  border: 1px solid rgba(127,127,127,0.5);
+}
+
+.jp-play-bar {
+	width:0px;
+	height:100%;
+	background: #cccccc;
+}
+
+@media screen and (max-width: 1200px) {
+
+.jp-time {
+	font-size: 1.5vw;
+	margin-top: 26px;
+}
+
+.jp-progress {
+	width: 77%;
+}
+
+}
+
+@media screen and (max-width: 580px) {
+
+*::-webkit-media-controls {
+min-width: 100%;
+}
+
+/*div#videoControls div.jp-progress {
+	bottom:0px;
+	left:0px;
+	position: absolute;
+	width:100%;
+	height:8px;
+	background-color: #dcdbda;
+	z-index: 4000;
+}*/
+
+#videoPlayerContainer {
+	border-bottom: 4px solid #ffffff;
+}
+.jp-interface, #videoPlayerContainer .close {
+	display: none;
+}
+
+div#videoControls div.jp-seek-bar {
+	width:0px;
+	height:100%;
+	cursor: pointer;
+	background-color: #dcdbda;
+}
+
+div#videoControls div.jp-play-bar {
+	width:0px;
+	height:100%;
+	background-color: #f8d603;
+}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
+    <title>Pandora</title>
+
+    <link type="text/css" href="../static/ads/mip/splash/css/fonts.css" rel="stylesheet" media="screen"/>
+    <link type="text/css" href="../static/programs/everywhere/_css/style.css" rel="stylesheet" media="screen"/>
+    <link type="text/css" href="../static/ads/mip/splash/css/jplayer.css" rel="stylesheet" media="screen"/>
+    <link type="text/css" href="../static/programs/everywhere/_css/adaptive.css" rel="stylesheet" media="screen"/>
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="/static/ads/mip/splash/css/ie8.css">
+    <![endif]-->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="../static/programs/everywhere/_js/global.js"></script>
+    <script type="text/javascript" src="../static/ads/mip/splash/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../static/ads/mip/splash/js/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="../static/ads/mip/splash/js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="../static/programs/everywhere/_js/jquery.iosslider.min.js"></script>
+    <script type="text/javascript" src="../static/programs/everywhere/_js/brain.js"></script>
+    <script type="text/javascript" src="../static/programs/everywhere/_js/carInfo.js"></script>
+<script>
+$(document).ready(function(){
+
+  var cars = {
+	Acura:['ILX','MDX','RDX','RLX','RLX','NSX','TLX'],
+	BMW:['1 Series','2 Series','3 Series','4 Series','5 Series','6 Series','7 Series','7 Series','i3','X1','X3','X5','X6','Z4'],
+	Buick:['Enclave','Encore','Lacrosse','Regal','Verano'],
+	Cadillac:['ATS','CTS','ELR','Escalade','Escalade ESV','SRX','XTS'],
+	Chevrolet:['Camaro','Colorado','Corvette','Cruze','Equinox','Impala','Malibu','Malibu Eco','Silverado','Silverado 1500','Silverado 2500','Silverado 3500','Sonic','Spark','SS','Suburban','Tahoe','Traverse','Volt'],
+	Chrysler:['200','300'],
+	Dodge:['Challenger','Charger','Durango','Viper'],
+	Ford:['C-MAX Connect','E-Series',,'Edge','Escape','Explorer','Expedition','F-150','F-250','F-350','F-450','Fiesta','Flex','Focus','Fusion','Mustang','Taurus','Transit Connect'],
+    GMC:['Acadia','Canyon','Sierra 1500','Sierra 2500','Sierra 3500','Terrain','Yukon','Yukon XL'],
+	Holden: ['Astra','Barina','Caprice','Cascada','Colorado','Colorado 7','Commodore','Cruze','Malibu','Trax'],
+	Honda:['Accord','Civic','CR-V','CR-Z','Crosstour','Fit','HR-V','Odyssey'],
+	Hyundai:['Azera','Elantra','Genesis','Sonata','Tucson','Veloster','Veracruz'],
+	Infiniti:['Q50','Q70','QX50','QX80'],
+	Jeep:['Cherokee','Grand Cherokee'],
+	Kia:['Forte','K900','Optima','Sedona','Sorento','Soul','Sportage'],
+	Lexus:['CT','ES','GS','GX','IS','LS','LX','RX'],
+	Lincoln:['MKZ','MKC','MKS','MKT','Navigator'],
+	Mazda:['CX-3','CX-5','CX-9','Mazda3','MX-5'],
+	MercedesBenz:['Any Model'],
+	Mini:['Clubman','Countryman','Hardtop 2-Door','Hardtop 4-Door','Paceman','Convertible','Coupe','Roadster'],
+	Nissan:['Altima','Frontier','Juke','Leaf','Maxima','Murano','NV 200','Pathfinder','Rogue','Sentra','Titan','Versa','Versa Note','Xterra','Quest','Armada'],
+	Ram:['1500 (DS)','2500 (DJ)','3500 (D2)','Cab Chassis (DD/DP','Cab Chassis (DD/DP)'],
+	Scion:['FR-S','iQ','tC','xB','xD'],
+	Subaru:['BRZ','Crosstrek','Forester','Impreza','Legacy','Outback','WRX/STI'],
+	Suzuki:['Grand Vitara','Kizashi','SX-4'],
+    Toyota:['4 Runner','Avalon','Camry','Corolla','Highlander','Land Cruiser','Prius','Prius C','Prius Plug-in','Prius V','Rav 4','Sequoia','Sienna','Tacoma','Tundra','Venza'],
+	Volvo:['S60','S80','V60','XC60','XC70']
+  }
+
+  $('#make').change(function () {
+    var selectedMake = $(this).val();
+    if (selectedMake) {
+      var test = $('#model');
+      var models = $('#model option:first').nextAll().remove();
+      var ModelsList = cars[selectedMake];
+      $.each(ModelsList, function () {
+       $("<option>" + this + "</option>").appendTo(test);
+     });
+    }
+	$('#message').empty();
+    if (selectedMake != "0") {
+      $('#model').removeClass('unselectable');
+    };
+  });
+
+  $('#year').change(function () {
+    var selectedYear = $(this).val();
+    if (selectedYear != "0") {
+      $('#make').removeClass('unselectable');
+    };
+    if (selectedYear !="0" && $('#make').val() !="0" && $('#model').val() !="0") {
+      getMsg();
+    }
+  });
+
+  $('#model').change(function() {
+    $('#message').empty();
+    getMsg();
+  });
+
+  function getMsg () {
+    $('#message').empty();
+    var msg = '<p style="display:none;">'+availability+'</p>';
+    $(msg).appendTo('#message').fadeIn(400);
+  };
+
+});
+</script>
+
+
+<style>.slide-text h2 {
+    width: 50%;
+}
+
+.slide-text h3 {
+    width: 53%;
+}
+
+.partner {
+	display:inline-block;
+	width: 175px;
+	text-align:center;
+}
+
+.iosSlider .slider .slide img,
+.slide-text {
+    cursor: default !important;
+}
+
+
+@media only screen and (max-width : 768px) {
+
+
+.responsiveHeight {
+    height: 0;
+    padding: 0 0 90%;
+}
+
+#dots {
+    bottom: auto;
+    top: 38%;
+}
+
+.slide-text.alt-slide {
+    padding: 7% 7% 0;
+}
+
+.partner {
+	display:inline-block;
+    width: 32.4%;
+}
+.slide-text h2,
+.slide-text h3 {
+    width: auto;
+}
+}
+
+@media only screen and (max-width : 480px){
+
+.partner {
+	display:inline-block;
+	width: 49%;
+}
+
+}
+
+
+</style>
+
+
+
+</head>
+
+<body id="auto">
+<div id="topBarContainer">
+     <a id="pandoraLogo" href="../index.html" ></a>
+    <div id="topBarBtns" class="topHelpBtn">
+  		<a href="https://help.pandora.com/" target="_blank">Need Help?</a>
+	</div>
+</div>
+
+<div id="mbl_navBarIcon" class="mbl">
+  <a id="pandoraLogo" href="../index.html" ></a>
+  <div id="mbl_menuIcon"></div>
+</div>
+<div id="navBarContainer">
+  <div class="wrapper">
+    <div id="navContainer" class="topRules">
+      <ul id="topNav">
+        <li><a href="index.html">In The Home</a></li>
+        <li><a href="in-the-car.html#" class="active">In The Car</a></li>
+        <li><a href="on-the-go.html" >On The Go</a></li>
+        <li><a href="for-your-business.html">For Your Business</a></li>
+        <li class="menuHelpBtn"><a href="https://help.pandora.com/" >Need Help?</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="responsiveHeight">
+
+        <!--div id="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div-->
+
+        <!--<div id="navNext" class="btn"></div>
+        <div id="navPrev" class="btn"></div>-->
+
+        <div class="inner">
+            <div class="iosSlider">
+                <div class="slider" >
+
+                    <div class="slide">
+                        <img src="../static/programs/everywhere/_img/auto/auto-slide1.jpg" class="web-slide">
+                        <img src="../static/programs/everywhere/_img/auto/auto-slide1-mbl.jpg" class="mbl-slide">
+                        <div class="slide-text left">
+                        	<h2>Take your Pandora stations along for the ride</h2>
+	  						<h3>When you create a Pandora account, your stations are accessible to you wherever you go.</h3>
+      						<!--<a href="https://amp.pandora.com/register" target="_blank" class="btn mblHide">Get Started</a>-->
+                        </div>
+                    </div>
+                    <!--div class="slide">
+                        <img src="/static/programs/everywhere/_img/mobile-slide2.jpg">
+                        <div class="slide-text left alt-slide">
+                        	<h2>Check out the new Roku 3, now playing your favorite stations</h2>
+      						<a href="#" target="_blank" class="btn">Learn More</a>
+                        </div>
+                    </div-->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+	<div class="car-search">
+		<div class="wrapper" >
+			<div class="columnRow">
+            	<h2>Ask your local dealer or check here to see if Pandora can be found in your car's dash:</h2>
+
+            	 <div id="select-year" class="car-select">
+                 <img src="../static/programs/everywhere/_img/arrow.png" />
+                 <select id="year">
+    				<option select="selected" value="0">Year</option>
+    				<option value="2016">2016</option>
+                    <option value="2015">2015</option>
+    				<option value="2014">2014</option>
+    				<option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                 </select>
+            	 </div>
+
+            	 <div id="select-make" class="car-select">
+              <img src="../static/programs/everywhere/_img/arrow.png" />
+                 <select id="make" class="unselectable">
+                 	<option select="selected" value="0">Car Make</option>
+                 	<option value="Acura">Acura</option>
+                 	<option value="BMW">BMW</option>
+                 	<option value="Buick">Buick</option>
+                    <option value="Cadillac">Cadillac</option>
+                 	<option value="Chevrolet">Chevrolet</option>
+                 	<option value="Chrysler">Chrysler</option>
+                    <option value="Dodge">Dodge</option>
+                 	<option value="Ford">Ford</option>
+                 	<option value="GMC">GMC</option>
+                    <option value="Holden">Holden</option>
+                 	<option value="Honda">Honda</option>
+                    <option value="Hyundai">Hyundai</option>
+                 	<!--option value="Infiniti">Infiniti</option-->
+                    <option value="Jeep">Jeep</option>
+                 	<option value="Kia">Kia</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Lincoln">Lincoln</option>
+                 	<option value="Mazda">Mazda</option>
+                    <option value="MercedesBenz">Mercedes Benz</option>
+                 	<option value="Mini">Mini</option>
+                 	<option value="Nissan">Nissan</option>
+                    <option value="Ram">Ram</option>
+                 	<option value="Scion">Scion</option>
+                    <option value="Subaru">Subaru</option>
+                 	<option value="Suzuki">Suzuki</option>
+                    <option value="Toyota">Toyota</option>
+                 	<option value="Volvo">Volvo</option>
+                 </select>
+            	 </div>
+
+            	 <div id="select-model" class="car-select">
+               <img src="../static/programs/everywhere/_img/arrow.png" />
+ 				 <select id="model" class="unselectable">
+    				<option select="selected" value="0">Car Model</option>
+ 				 </select>
+                 </div>
+
+  <div id="message"></div>
+
+                <br />
+                <small>Pandora may only be available with optional equipment. Model availability subject to change.</small>
+			</div> <!--columnRow-->
+		</div> <!--wrapper-->
+	</div> <!--car-search-->
+
+
+
+<div class="fullBleed content">
+  <div class="wrapper" >
+    <div class="columnRow">
+
+    <p>Pandora can be controlled directly through the dash of nearly 200 models. If you don't have one of these models, you can still listen to Pandora in your car by connecting your mobile device via AUX cord or Bluetooth.</p>
+
+    <div class="partner"><a href="http://pdora.co/acura" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_acura.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/bmw" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_bmw.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/buick" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_buick.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/cadillac" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_cadillac.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/chevrolet" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_chevrolet.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/chrysler" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_chrysler.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/dodge" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_dodge.png" width="200" height="135" /></a></div>
+	<!--div class="partner"><img src="/static/programs/everywhere/_img/fiat.png" width="200" height="135" /></div-->
+    <div class="partner"><a href="http://pdora.co/ford" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_ford.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/gmc" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_gmc.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/honda" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_honda.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/hyundai" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_hyundai.png" width="200" height="135" /></a></div>
+    <!--div class="partner"><img src="/static/programs/everywhere/_img/auto/logo_infiniti.png" width="200" height="135" /></div-->
+    <div class="partner"><a href="http://pdora.co/jeep" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_jeep.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/kia" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_kia.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/lexus" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_lexus.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/lincoln" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_lincoln.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/mazda" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_mazda.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/mercedes-benz" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_mercedes.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/nissan" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_nissan.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/ram" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_ram.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/scion" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_scion.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/subaru" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_subaru.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/suzuki" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_suzuki.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/toyota" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_toyota.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/volvo" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_volvo.png" width="200" height="135" /></a></div>
+
+    </div> <!--columnRow-->
+
+  </div> <!--wrapper-->
+
+
+
+</div> <!--fullbleed-->
+
+<div class="fullBleed content">
+  <div class="wrapper" >
+    <div class="columnRow">
+    <div class="columnLg">
+    <h2>Aftermarket Partners</h2>
+    <p>Pandora can also be controlled from select aftermarket devices.</p>
+    &nbsp;<br />
+    </div>
+
+	<div class="partner"><a href="http://pdora.co/alpine" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_alpine.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/audiovox" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_audiovox.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/clarion" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_clarion.png" width="200" height="135" /></a></div>
+	<div class="partner"><a href="http://pdora.co/dual" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_dual.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/jvc" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_jvc.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/kenwood" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_kenwood.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/pioneer" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_pioneer.png" width="200" height="135" /></a></div>
+    <div class="partner"><a href="http://pdora.co/sony" target="blank"><img src="../static/programs/everywhere/_img/auto/logo_sony.png" width="200" height="135" /></a></div>
+
+
+
+    </div> <!--columnRow-->
+  </div> <!--wrapper-->
+</div> <!--fullbleed-->
+
+
+    <footer id="footerContainer">
+    </footer>
+
+
+  <script>
+    $(function(){
+      $("#footerContainer").load("/static/programs/everywhere/footer.html");
+    });
+  </script>
+
+
+<script>
+$('a').append(function() {
+	var href = $(this).attr('href');
+	if (href !== "#") {
+    	$(this).attr('onclick', 'trackOutboundLink(\''+href+'\'); return false;');
+    	return false;
+	}
+});
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2309503-19', 'auto');
+  ga('send', 'pageview');
+  
+  var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+     function () {
+     document.location = url;
+     }
+   });
+}
+
+</script>
+
+</body>
+</html>
